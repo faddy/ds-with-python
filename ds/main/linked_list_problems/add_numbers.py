@@ -1,5 +1,5 @@
 from data_structures.linked_lists import Node
-from linked_list_problems.remove_dups import print_list
+from linked_list_problems.utils import print_list
 
 
 def add_num(a, b, carry):

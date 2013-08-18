@@ -1,5 +1,5 @@
-from node_class import Node
-from utils import create_unique_linked_list, print_list
+from data_structures.linked_lists import Node
+from linked_list_problems.utils import create_unique_linked_list, print_list
 import random
 
 
