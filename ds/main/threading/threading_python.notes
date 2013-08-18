@@ -1,0 +1,43 @@
+A thread 
+  has a beginning, 
+  an execution sequence, and 
+  a conclusion. 
+
+It has an instruction pointer that keeps track of where within its context it is currently running.
+
+It can be pre-empted (interrupted)
+
+It can temporarily be put on hold (also known as sleeping) while other threads are running - this is called yielding.
+
+
+To spawn another thread:
+  thread.start_new_thread( function, args[, kwargs])
+  - the method call returns immediately
+  - the child thread starts and calls function with the passed list of args.
+  - when function returns, thread terminates
+
+-------------------------
+
+Threading class
+
+run()   	the entry point for the thread
+start() 	starts a thread by calling the run method
+join([time]) 	waits for threads to terminate
+isAlive()	check if the thread is still executing
+getName()	gets name of the thread
+setName()	sets name of the thread
+
+--------------------------
+
+Synchronizing thread
+
+A new lock is created by calling Lock() method, which returns the new lock.
+acquire(blocking) : a new lock object would be used to force threads to run synchronously.
+if blocking is set to 0:
+    if lock can't be acquired, returns 0
+    if lock was acquired, returns 1
+if blocking is set to 1:
+    thread waits until the lock is available
+lock.release() will release  the lock
+
+
