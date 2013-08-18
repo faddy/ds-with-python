@@ -1,3 +1,6 @@
+'''
+A HashMap implementation in python
+'''
 
 class HashMap(object):
     def __init__(self):
