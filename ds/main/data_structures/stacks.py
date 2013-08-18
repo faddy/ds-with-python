@@ -1,3 +1,7 @@
+
+from data_structures.linked_lists import Node
+
+
 class Stack(object):
     def __init__(self):
         self.data = []
@@ -24,19 +28,22 @@ class Stack(object):
         return ', '.join([str(i) for i in self.data])
 
 
-def test():
-    s=Stack()
-    print(s.is_empty())
-    s.push(4)
-    s.push('dog')
-    print(s.peek())
-    s.push(True)
-    print(s.size())
-    print(s.is_empty())
-    s.push(8.4)
-    print(s.pop())
-    print(s.pop())
-    print(s.size())
+class StackWithLinkedList(object):
+    def __init__(self):
+        self.top = None
 
-if __name__ == '__main__':
-    test()
+    def pop(self):
+        if not self.top: return None
+        else:
+            item = self.top
+            self.top = self.top.nxt
+            return item.data
+
+    def push(self):
+        if not self.top:
+            self.top = Node(data)
+        else:
+            n = Node(data)
+            n.nxt = self.top
+            self.top = n
+

@@ -1,14 +1,14 @@
 # sort a stack in ascending order using only these functions:
 # push(), pop(), peek(), is_empty()
 
-from stack_implementations import StackWithList
+from data_structures.stacks import Stack
 
 
 def sort_stack(orig):
-    if not orig or not isinstance(orig, StackWithList):
+    if not orig or not isinstance(orig, Stack):
         return None
 
-    dup = StackWithList()
+    dup = Stack()
 
     while not orig.is_empty():
         item = orig.pop()
@@ -34,15 +34,19 @@ def sort_stack(orig):
 
 
 def test():
-    s = StackWithList()
+    s = Stack()
     s.push(44)
     s.push(32)
     s.push(39)
     s.push(-22)
     s.push(14)
 
-    print s.storage
+    print s.data
 
     sort_stack(s)
 
-    print s.storage
+    print s.data
+
+
+if __name__ == '__main__':
+    test()
