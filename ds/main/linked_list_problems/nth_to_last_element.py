@@ -1,6 +1,6 @@
 #!/usr/bin/python
-from node_class import Node
-from utils import create_linked_list, print_list
+from data_structures.linked_lists import Node
+from linked_list_problems.utils import create_linked_list, print_list
 
 
 def nth_to_last_element(head, n):
@@ -24,5 +24,5 @@ if __name__ == '__main__':
     head = create_linked_list(8)
     print_list(head)
 
-    node = nth_to_last_element(head, 9)
+    node = nth_to_last_element(head, 4)
     print node.data

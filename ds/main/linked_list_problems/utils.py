@@ -1,4 +1,4 @@
-from node_class import Node
+from data_structures.linked_lists import Node
 import random
 
 
