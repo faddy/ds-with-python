@@ -8,12 +8,12 @@ class Fraction(object):
         return str(self.num) + '/' + str(self.den)
 
     def __add__(self, other):
-        n = self.num*other.den + other.num*self.den
-        d = self.den*other.den
+        n = self.num * other.den + other.num * self.den
+        d = self.den * other.den
         return Fraction(n, d)
 
     def __eq__(self, other):
-        n1 = self.num*other.den
-        n2 = other.num*self.den
+        n1 = self.num * other.den
+        n2 = other.num * self.den
 
         return n1 == n2
